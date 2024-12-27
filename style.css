@@ -1,0 +1,992 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/AnyConv.com__Roboto-Light.woff2') format('woff2');
+  font-weight: 200;
+  font-style: light;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/AnyConv.com__Roboto-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archangelsk';
+  src: url('./fonts/ofont.ru_Archangelsk.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-dark: #000000;
+  --color-white: #FFFFFF;
+  --color-yellow: #F8F200;
+  --color-blue: #52BEDC;
+  --color-grey: #777777;
+
+  --font-family-base: 'Roboto', sans-serif;
+  --font-family-accent: 'Archangelsk', sans-serif;
+
+  --container-whidth: 1280px;
+  --container-padding-x: 36px;
+
+  --transition-duration: 0.2s;
+  --transition: transform 0.5s;
+}
+
+body,
+button,
+input {
+    font-family: var(--font-family-base);
+    font-size: 18px;
+    line-height: 180%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-accent);
+}
+
+p {
+  line-height: 1.6;
+}
+
+a,
+button,
+input,
+textarea {
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+}
+
+.container {
+  max-width: var(--container-whidth);
+  padding: 0 var(--container-padding-x);
+  margin: 0 auto;
+}
+
+.headline-large {
+  font-size: 62px;
+  line-height: 1.0;
+}
+
+.headline-medium {
+  font-size: 24px;
+  /* line-height: 110%; */
+  color: var(--color-blue);
+}
+
+.button-large {
+  max-width: 282px;
+  height: auto;
+  padding: 19px 50px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.description__info-text_color-blue {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.button-medium {
+  max-width: 194px;
+  height: auto;
+  padding: 15px 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button-primary {
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
+}
+
+.button-primary:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  transition-duration: var(--transition-duration);
+}
+
+.button-secondary {
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+}
+
+.button-secondary:hover {
+  background-color: var(--color-white);
+  transition-duration: var(--transition-duration);
+}
+
+.input-form {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-grey);
+  height: 35px;
+  max-width: 460px;
+  padding: 8px 0 12px;
+}
+
+.input-form:hover {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.social-network__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.banner__slider .slider-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner .banner__content {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.banner__content_info {
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.logo_size-m {
+  width: 296px;
+  height: 74px;
+}
+
+.social-network {
+  display: flex;
+  gap: 40px;
+}
+
+.information-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.information-card__transition {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 70px;
+  max-width: 624px;
+  height: auto;
+  background-color: var(--color-yellow);
+  clip-path: polygon(9% 0, 80% 0%, 100% 0, 100% 86%, 91% 100%, 20% 100%, 0 100%, 0 15%);;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.description__info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  padding-right: 10%;
+}
+
+.description__info-text_color-grey {
+  color: var(--color-grey);
+}
+
+.description__image-card {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  max-height: 424px;
+}
+
+.description__image-card_group {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 35%;
+}
+
+.description__image-card_small {
+  display: flex;
+  height: 196px;
+}
+
+.description__image-card_large {
+  display: flex;
+  width: 65%;
+  height: 424px;
+}
+
+.description__image-card_shape {
+  clip-path: polygon(9% 0, 80% 0%, 100% 0, 100% 86%, 91% 100%, 20% 100%, 0 100%, 0 15%);;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.description-game-decoration {
+  background-image: url(./image/dcr\ top.png);
+  height: 70px;
+  width: 100%;
+}
+
+.game-advantages-decoration {
+  background-image: url(./image/dcr\ btm.png);
+  height: 70px;
+  width: 100%;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.element {
+  padding-right: 32px;
+}
+
+.element__stock {
+  width: 123px;
+  height: 132px;
+}
+
+.game-headline {
+  max-width: 569px;
+  padding-top: 55px;
+}
+
+.game-text-description {
+  max-width: 952px;
+  padding: 25px 0;
+  padding-bottom: 55px;
+}
+
+.form {
+  width: 35%;
+  padding-top: 98px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.form-group-input {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.file-uploader {
+  position: relative;
+  max-width: 460px;
+  height: 120px;
+  align-content: center;
+  border: 1px dashed var(--color-grey);
+}
+
+.file-uploader-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.file-chous {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.text-chous {
+  text-align: center;
+}
+
+.scren-style {
+  text-decoration: underline 0.8px;
+  color: var(--color-white);
+  font-weight: 200;
+}
+
+.format,
+.checkbox {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 100%;
+}
+
+.form-button {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-yellow)
+}
+
+.game-image-group {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  height: 456px;
+  padding-top: 15px;
+}
+
+.game-image-description-yellow, 
+.game-image-description-blue  {
+  max-width: 460px;
+  max-height: 456px;
+}
+
+.game-image-description-yellow {
+  margin-right: -50px;
+  z-index: 1;
+}
+
+.layer-yellow, 
+.layer-blue {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  background-color: var(--color-yellow);
+}
+
+.advantages-wrapp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  margin: 70px 0;
+}
+
+.advantages-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 25px;
+  padding-right: 32px;
+}
+
+.advantages-image {
+  max-width: 100%;
+}
+.image-screen {
+  width: 100%;
+  object-fit: contain;
+}
+
+.advantages-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding: 0 42px;
+  align-items: center;
+}
+
+.logo-hp {
+  display: flex;
+  max-width: 80px;
+}
+
+.logo-cyberpunk {
+  display: flex;
+  max-width: 320px;
+}
+
+.cross {
+  display: flex;
+  max-width: 100%;
+}
+
+.image-cyberpunk {
+  max-width: 100%;
+}
+
+.advantages-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.advantages-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.advantages-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-item {
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+
+.advantages-right .button {
+  margin-top: 40px;
+}
+
+.game-package {
+  display: flex;
+}
+
+.game-package-image {
+  display: flex;
+  width: 50%;
+}
+
+.package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-package-content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 70px 0 70px 32px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.game-package-content .headline-large {
+  max-width: 624px;
+  padding-bottom: 25px;
+}
+
+.game-package-content .headline-medium {
+  padding-bottom: 15px;
+}
+
+.game-package-content .advantages-list {
+  padding-bottom: 70px;
+}
+
+.game-platform .headline-medium {
+  padding-bottom: 25px;
+}
+
+.platform-logo {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.platform-logo-top,
+.platform-logo-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.platform-logo-top {
+  padding-bottom: 47px;
+}
+
+.ps, 
+.xbox, 
+.stadia, 
+.playstation {
+  display: flex;
+}
+
+.ps {
+  width: 62px;
+  height: 36px;
+}
+
+.xbox {
+  width: 178px;
+  height: 36px;
+}
+
+.stadia {
+  width: 58px;
+  height: 50px;
+}
+
+.playstation {
+  width: 168px;
+  height: 35px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo-wrapp, 
+.footer-link-wrapp {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.footer-logo-wrapp {
+  padding: 12px 0;
+}
+
+.footer-link {
+  color: var(--color-dark);
+}
+
+.footer-registered {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.registered {
+  font-size: 12px;
+}
+
+.footer-logo {
+  display: flex;
+}
+
+@media (max-width: 1280px) {
+
+  .description__image-card {
+    flex-direction: column;
+    gap: 32px;
+    max-height: 100%;
+  }
+
+  .description__image-card_group {
+    flex-direction: row;
+    width: 100%;
+    gap: 32px;
+    max-width: 100%;
+  }
+
+  .description__image-card_large,
+  .description__image-card_small {
+    width: 100%;
+  }
+
+  .element {
+    width: 50%;
+    padding-top: 15px;
+    padding-right: 0;
+    order: 1;
+  }
+
+  .game-headline {
+    margin-top: -320px;
+    max-width: 50%;
+    padding-top: 15px;
+    order: 3;
+  }
+  
+  .game-text-description {
+    max-width: 55%;
+    max-height: 160px;
+    padding: 25px 0;
+    padding-bottom: 0px;
+    order: 4;
+    margin-top: -180px;
+  }
+
+  .form {
+    width: 50%;
+    padding-top: 98px;
+    order: 5;
+  }
+
+  .game-image-group {
+    flex-direction: column;
+    width: 50%;
+    padding-top: 98px;
+    padding-bottom: 70px;
+    order: 2;
+  }
+
+  .game-image-description-yellow {
+    margin-right: 0px;
+    margin-bottom: -20px;
+  }
+
+  .advantages-logo {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .game-package-image {
+    width: 30%;
+  }
+
+  .game-package-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 960px) {
+
+  .banner__content_info.container {
+    padding: 0px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 12px;
+  }
+
+  .description__info-text {
+    max-width: 788px;
+  }
+
+  .description__image-card {
+    flex-direction: column;
+    gap: 32px;
+    max-height: 100%;
+  }
+
+  .description__image-card_group {
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .game-headline {
+    margin-top: 0px;
+    max-width: 100%;
+    padding-top: 0px;
+  }
+  
+  .game-text-description {
+    max-width: 100%;
+    max-height: 160px;
+    padding: 25px 0;
+    padding-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .game-image-group {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 32px;
+    padding-top: 0px;
+    padding-bottom: 32px;
+  }
+
+  .advantages-text .headline-large {
+    word-break: break-all;
+  }
+
+  .advantages-item {
+    align-items: flex-start;
+  }
+
+  .form {
+    width: 50%;
+    padding-top: 70px;
+  }
+  
+  .game-image-description-yellow, 
+  .game-image-description-blue  {
+    position: relative;
+    max-width: 132px;
+    max-height: 130px;
+  }
+  
+  .layer-yellow, 
+  .layer-blue {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .game-contant-yellow,
+  .game-contant-blue {
+    max-width: 85px;
+    max-height: 100px;
+  }
+  
+  .footer-wrap {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .footer-logo-wrapp, 
+  .footer-link-wrapp {
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .footer-logo-wrapp {
+    padding: 40px 0 0;
+    gap: 25px;
+  }
+
+  .footer-link-wrapp {
+    gap: 15px;
+    padding-bottom: 25px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  body,
+  button,
+  input {
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    line-height: 180%;
+  }
+
+  .logo_size-m {
+    width: 200px;
+    height: 50px;
+  }
+  
+  .social-network__icon {
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .headline-large {
+    font-size: 30px;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 12px;
+  }
+
+  .card {
+    margin-right: 0px;
+  }
+
+  .information-card__transition {
+    margin-right: 0;
+    align-items: center;
+    padding: 30px;
+    max-width: 624px;
+  }
+
+  .information-card__transition .headline-large{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .button-large {
+    height: auto;
+    padding: 15px 50px;
+  }
+
+  .button-primary {
+    font-size: 20px;
+  }
+
+  .social-network {
+    gap: 30px;
+  }
+
+  .description__info-text {
+    padding-right: 0px;
+  }
+
+  .description__image-card {
+    margin: 0px -12px;
+  }
+  .element {
+    padding-top: 6px;
+  }
+
+  .element__stock,
+  .stock-vector {
+    width: 62px;
+    height: 62px;
+  }
+
+  .game-image-group {
+    justify-content: center;
+  }
+
+  .game-text-description {
+    max-height: 216px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .button-medium {
+    max-width: 182px;
+    max-height: 60px;
+  }
+
+  .button-secondary {
+    font-size: 16px;
+  }
+
+  .advantages-left,
+  .advantages-right {
+    width: 100%;
+  }
+
+  .advantages-left {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .advantages-logo {
+    flex-direction: row;
+  }
+
+  .icon-item {
+    width: 24px;
+    height: 24px;
+  }
+
+  .advantages-right .button-primary {
+    font-size: 16px;
+  }
+
+  .game-package {
+    flex-direction: column;
+  }
+
+  .game-package-image,
+  .game-package-content {
+    width: 100%;
+  }
+
+  .game-package-image {
+    height: 198px;
+  }
+
+  .headline-medium {
+    font-size: 20px;
+  }
+
+  .game-package-content {
+    padding: 40px 12px 70px;
+  }
+
+  .game-package-content .advantages-list {
+    padding-bottom: 40px;
+  }
+
+  .platform-logo {
+    width: 100%;
+  }
+
+  .logo_size-s {
+    width: 116px;
+    height: 50px;
+  }
+}
